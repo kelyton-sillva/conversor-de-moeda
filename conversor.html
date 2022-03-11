@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+  font-family: "Roboto Mono", monospace;
+  min-height: 400px;
+ 
+  background-color: #000000;
+  background-size: 100vh;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+input {
+  margin: 12px;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+label {
+  color: white;
+}
+
+button {
+  margin-top: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+
+</style>
+<body>
+    <div class="container">
+  <h1 class="page-title">
+    Conversor de moedas
+  </h1>
+  <p class="page-subtitle">
+    Descubra os valores em dolar U$
+  </p>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <label for="moeda">Insira o valor</label><br>
+  <input type="number" id="valor" size="2" /><br>
+  <button type="submit" onclick="Converter()">Converter</button>
+  <h2 id="valorConvertido"></h2>
+</div >
+<a  target="_blank">
+   
+
+   <Script>
+    function Converter () {
+      var ValorElemento = document.getElementById("valor");
+      var valor = ValorElemento.value;
+      var ValorEmReal = parseFloat(valor);
+      
+      
+      var ValorEmDolar = ValorEmReal * 5;
+      console.log(ValorEmDolar);
+
+      var ElementovalorConvertido = document.getElementById("valorConvertido");
+      var valorConvertido = "O resultado em Real é R$" + ValorEmDolar;
+      ElementovalorConvertido.innerHTML = valorConvertido;
+    }</Script>
+</body>
+
+
+</html>
